@@ -1,4 +1,4 @@
-interface Products {
+export interface Products {
   description: string;
   price: number;
 }
@@ -13,12 +13,12 @@ const tablet: Products = {
   price: 215.5,
 };
 
-interface TaxCalculationOptions {
+export interface TaxCalculationOptions {
   tax: number;
   products: Products[];
 }
 
-function taxCalculation(options: TaxCalculationOptions): number[] {
+export function taxCalculation(options: TaxCalculationOptions): number[] {
   let total = 0;
 
   options.products.forEach((product) => {
@@ -36,8 +36,8 @@ const resultTax = taxCalculation({
   tax: tax,
 });
 
-console.log('Total: ', resultTax[0]);
-console.log('Tax: ', resultTax[1]);
+// console.log('Total: ', resultTax[0]);
+// console.log('Tax: ', resultTax[1]);
 
 /* Tarea de aplicar destructuracion */
 
@@ -46,6 +46,6 @@ const [totalPrice, TotalTax] = taxCalculation({
   tax: tax,
 });
 
-console.log('Total Des:', totalPrice);
-console.log('Tax Des:', TotalTax);
-export {};
+// console.log('Total Des:', totalPrice);
+// console.log('Tax Des:', TotalTax);
+// export {};
